@@ -45,3 +45,4 @@ function tinhTong($a, $b){
 }
 
 tinhTong(5, 4);
+tinhTong(5, 4);

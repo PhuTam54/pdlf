@@ -11,11 +11,11 @@
     }
     */
 
-    $email = htmlspecialchars($_POST['email']) ?? ''; // coalescing
-    $age = htmlspecialchars($_POST['password']) ?? ''; // coalescing
+    $email = filter_var($_POST['email'], FILTER_SANITIZE_SPECIAL_CHARS) ?? ''; // coalescing
+    $password = htmlspecialchars($_POST['password']) ?? ''; // coalescing
     echo $email;
     echo '<br>';
-    echo $age;
+    echo $password;
 ?>
 
 <<!doctype html>

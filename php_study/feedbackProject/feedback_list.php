@@ -1,5 +1,6 @@
 <?php
-    require 'components/header.php';
+global $connection;
+require 'components/header.php';
     echo "<h1>List of feedbacks here</h1>";
     $sql = "SELECT name, email, body from feedbacks;";
     if($connection != null) {

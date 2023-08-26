@@ -1,5 +1,6 @@
 <?php
-    require 'components/header.php';
+global $connection;
+require 'components/header.php';
     $name = $email = $body = '';
     $name_error = $email_error = $body_error = '';
     if(isset($_POST['submit'])) {
@@ -58,19 +59,19 @@
             <input type="email" class="form-control
                 <?php echo $email_error ? 'is-invalid' : ''; ?>"
                    name="email" placeholder="Enter your email">
+            <p class="text-danger">
+                <?php echo $email_error; ?>
+            </p>
         </div>
-        <p class="text-danger">
-            <?php echo $email_error; ?>
-        </p>
         <div class="mb-3">
                 <textarea class="form-control
                 <?php echo $name_error ? 'is-invalid' : ''; ?>"
                           name="body" placeholder="Enter your feedback"
                           rows="2"></textarea>
+            <p class="text-danger">
+                <?php echo $body_error; ?>
+            </p>
         </div>
-        <p class="text-danger">
-            <?php echo $body_error; ?>
-        </p>
         <div class="mb-3">
             <input type="submit"
                    class="btn btn-primary"

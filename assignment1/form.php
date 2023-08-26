@@ -1,10 +1,10 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <?php include("head.php"); ?>
+    <?php include("../components/head.php"); ?>
 </head>
 <body>
-<?php include("nav.php"); ?>
+<?php include("../components/nav.php"); ?>
 <div class="container">
     <form action="store.php" method="post">
         <div class="mb-3">

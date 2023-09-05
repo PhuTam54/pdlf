@@ -1,5 +1,4 @@
 <?php
-    session_start();
     $cart = isset($_SESSION["cart"])?$_SESSION["cart"]:[];
 ?>
 <nav class="navbar navbar-expand-lg bg-body-tertiary" style="background-color: #e3f2fd;">

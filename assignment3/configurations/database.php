@@ -1,4 +1,6 @@
 <?php
+session_start();
+
     //PDO - PHP Data Object
     const DATABASE_SERVER = 'localhost';
     const DATABASE_USER = 'root';

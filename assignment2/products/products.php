@@ -12,7 +12,7 @@
     }
     // connection succeed
     // 2. query
-    $sql = 'select * from products';
+    $sql = 'select * from product';
     $result = $conn->query($sql);
     $products = [];
     if ($result->num_rows > 0) {

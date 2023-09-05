@@ -17,10 +17,10 @@
     }
 // connection succeed
 // 2. query
-    $sql = "insert into products(name, price, description, qty) values ('$name', '$price', '$description', $qty)";
+    $sql = "insert into product(name, price, description, qty) values ('$name', '$price', '$description', $qty)";
     $conn->query($sql);
 // quay trở về trang danh sách
-    header("Location: products.php");
+    header("Location: product.php");
 ?>
 
 

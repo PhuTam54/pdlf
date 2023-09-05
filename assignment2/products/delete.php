@@ -14,14 +14,14 @@ if ($conn->connect_error) {
 }
 // connection succeed
 // 2. query
-$sql = "select * from products where id = '$id'"; // 0 | 1
+$sql = "select * from product where id = '$id'"; // 0 | 1
 $result = $conn->query($sql);
 if ($result->num_rows > 0) {
     $delete_sql =
-        "delete from products where id= '$id'";
+        "delete from product where id= '$id'";
     $conn->query($delete_sql);
     // quay trở về trang danh sách
-    header("Location: products.php");
+    header("Location: product.php");
 } else {
     die('404 not found');
 }

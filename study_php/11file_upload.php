@@ -1,17 +1,16 @@
 <?php
-echo "File upload in PHP";
 if(isset($_POST['submit'])) {
     $permitted_extensions = ['png', 'jpg', 'jpeg', 'gif'];
     $file_name = $_FILES['upload']['name'];
     if(!empty($file_name)) {
-        //print_r($_FILES);
+//        print_r($_FILES);
         $file_size = $_FILES['upload']['size'];
         $file_tmp_name = $_FILES['upload']['tmp_name'];
         $generated_file_name = time().'-'.$file_name;
-        $destination_path = "uploads/{$generated_file_name}";
+        $destination_path = "11uploads/{$generated_file_name}";
         $file_extension = explode('.', $file_name);
         $file_extension = strtolower(end($file_extension));
-        //echo "$file_name, $file_size, $file_extension, $destination_path";
+//        echo "$file_name, $file_size, $file_extension, $destination_path";
         //validate file extension permitted
         if(in_array($file_extension, $permitted_extensions)) {
             if($file_size <= 1000000) {
@@ -50,8 +49,8 @@ if(isset($_POST['submit'])) {
       enctype="multipart/form-data"
 >
     Choose your image to upload
-    <input type="file" name="upload">
-    <input type="submit" value="submit" name="submit">
+    <input type="file" name="upload"> <br> <br>
+    <input type="submit" value="Submit" name="submit">
 </form>
 <?php echo $message ?? '' ?>
 </body>

@@ -65,9 +65,11 @@ require 'components/header.php';
         </div>
         <div class="mb-3">
                 <textarea class="form-control
-                <?php echo $name_error ? 'is-invalid' : ''; ?>"
-                          name="body" placeholder="Enter your feedback"
-                          rows="2"></textarea>
+                <?php echo $body_error ? 'is-invalid' : ''; ?>"
+                          name="body"
+                          placeholder="Enter your feedback"
+                          rows="2"
+                ></textarea>
             <p class="text-danger">
                 <?php echo $body_error; ?>
             </p>
@@ -75,7 +77,8 @@ require 'components/header.php';
         <div class="mb-3">
             <input type="submit"
                    class="btn btn-primary"
-                   name="submit" value="Send">
+                   name="submit"
+                   value="Send">
         </div>
     </form>
 <?php include 'components/footer.php'; ?>

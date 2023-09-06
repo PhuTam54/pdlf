@@ -1,12 +1,11 @@
 <?php
 echo "File Handling in PHP<br>";
 //read / write file on the server
-$file_path = './fruits.txt';
+$file_path = './11fruits.txt';
 if(file_exists($file_path)) {
-    //echo readFile($file_path);//31 - number of bytes of the file
+//    echo readFile($file_path);//31 - number of bytes of the file
     $file_handle = fopen($file_path, 'r');
-    $file_content = fread($file_handle,
-        filesize($file_path));
+    $file_content = fread($file_handle,filesize($file_path));
     fclose($file_handle);
     echo $file_content;
 } else {
